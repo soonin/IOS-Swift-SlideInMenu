@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA6AC69B20E32F020057459D /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AC69A20E32F020057459D /* SettingCell.swift */; };
 		FA6F980A20CB6DC60011F5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F980920CB6DC60011F5DD /* AppDelegate.swift */; };
 		FA6F980C20CB6DC60011F5DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F980B20CB6DC60011F5DD /* ViewController.swift */; };
 		FA6F980F20CB6DC60011F5DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6F980D20CB6DC60011F5DD /* Main.storyboard */; };
 		FA6F981120CB6DC70011F5DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6F981020CB6DC70011F5DD /* Assets.xcassets */; };
 		FA6F981420CB6DC70011F5DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6F981220CB6DC70011F5DD /* LaunchScreen.storyboard */; };
+		FA6F981F20CB913B0011F5DD /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F981E20CB913B0011F5DD /* Extentions.swift */; };
+		FA6F982120CB93290011F5DD /* SlideInHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F982020CB93290011F5DD /* SlideInHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA6AC69A20E32F020057459D /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		FA6F980620CB6DC60011F5DD /* IOS-Swift-SlideInMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Swift-SlideInMenu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6F980920CB6DC60011F5DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA6F980B20CB6DC60011F5DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		FA6F981020CB6DC70011F5DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6F981320CB6DC70011F5DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA6F981520CB6DC70011F5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6F981E20CB913B0011F5DD /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		FA6F982020CB93290011F5DD /* SlideInHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		FA6F980820CB6DC60011F5DD /* IOS-Swift-SlideInMenu */ = {
 			isa = PBXGroup;
 			children = (
+				FA6F981D20CB91250011F5DD /* Helper */,
 				FA6F980920CB6DC60011F5DD /* AppDelegate.swift */,
 				FA6F980B20CB6DC60011F5DD /* ViewController.swift */,
 				FA6F980D20CB6DC60011F5DD /* Main.storyboard */,
@@ -62,6 +69,16 @@
 				FA6F981520CB6DC70011F5DD /* Info.plist */,
 			);
 			path = "IOS-Swift-SlideInMenu";
+			sourceTree = "<group>";
+		};
+		FA6F981D20CB91250011F5DD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FA6F981E20CB913B0011F5DD /* Extentions.swift */,
+				FA6AC69A20E32F020057459D /* SettingCell.swift */,
+				FA6F982020CB93290011F5DD /* SlideInHandler.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6F980C20CB6DC60011F5DD /* ViewController.swift in Sources */,
+				FA6F982120CB93290011F5DD /* SlideInHandler.swift in Sources */,
 				FA6F980A20CB6DC60011F5DD /* AppDelegate.swift in Sources */,
+				FA6AC69B20E32F020057459D /* SettingCell.swift in Sources */,
+				FA6F981F20CB913B0011F5DD /* Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,13 +302,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "IOS-Swift-SlideInMenu/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pooya.brain.dev.IOS-Swift-SlideInMenu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -299,13 +320,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "IOS-Swift-SlideInMenu/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pooya.brain.dev.IOS-Swift-SlideInMenu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

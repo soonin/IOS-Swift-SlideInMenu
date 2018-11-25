@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,74 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS_Swift_SlideInMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="sit-ob-UVf">
+                                <rect key="frame" x="56" y="167" width="262.5" height="333.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dg-JN-Hnb">
+                                        <rect key="frame" x="56" y="190" width="151" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="EMp-WK-aKI"/>
+                                            <constraint firstAttribute="width" constant="151" id="hdZ-5m-UoD"/>
+                                        </constraints>
+                                        <state key="normal" title="Call Menu">
+                                            <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2dg-JN-Hnb" firstAttribute="centerX" secondItem="sit-ob-UVf" secondAttribute="centerX" id="81u-Xo-gNG"/>
+                                    <constraint firstItem="2dg-JN-Hnb" firstAttribute="centerX" secondItem="sit-ob-UVf" secondAttribute="centerX" id="yzF-OC-0dn"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="caf-Uc-ZZh">
+                                <rect key="frame" x="68" y="319" width="239" height="29"/>
+                                <segments>
+                                    <segment title="Top"/>
+                                    <segment title="Right"/>
+                                    <segment title="Left"/>
+                                    <segment title="Bottom"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slide In Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUv-NS-qqh">
+                                <rect key="frame" x="72" y="266" width="231" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="lwU-v0-DTP"/>
+                                    <constraint firstAttribute="height" constant="45" id="p6I-gR-moG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.10542747130000001" green="0.1051858938" blue="0.62740851679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="caf-Uc-ZZh" firstAttribute="top" secondItem="dUv-NS-qqh" secondAttribute="bottom" constant="8" id="9ho-nD-rUX"/>
+                            <constraint firstItem="2dg-JN-Hnb" firstAttribute="top" secondItem="caf-Uc-ZZh" secondAttribute="bottom" constant="10" id="Kb5-GL-LbV"/>
+                            <constraint firstItem="dUv-NS-qqh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1p-u2-cQm"/>
+                            <constraint firstItem="sit-ob-UVf" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="OfP-4u-Hfj"/>
+                            <constraint firstItem="caf-Uc-ZZh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q4R-Zg-Sgx"/>
+                            <constraint firstItem="caf-Uc-ZZh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RyW-KO-DrN"/>
+                            <constraint firstItem="sit-ob-UVf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cxH-Jd-UsA"/>
+                            <constraint firstItem="sit-ob-UVf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hE4-4f-T0E"/>
+                            <constraint firstItem="sit-ob-UVf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="xaY-p2-zhp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonView" destination="2dg-JN-Hnb" id="y7n-47-pVh"/>
+                        <outlet property="segOption" destination="caf-Uc-ZZh" id="abA-cZ-uBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
